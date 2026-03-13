@@ -14,7 +14,7 @@ const Signup = () => {
   const [loading, setLoading] = useState("");
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
-
+  
   // Below is a function that will handle the submit action
   const handleSubmit = async(e) => {
     // Below will prevent our sit from reloading
@@ -34,7 +34,7 @@ const Signup = () => {
       formdata.append("phone", phone);
 
       // By use of axios we can access the method post 
-      const response =await axios.post("http://frostyghost23.alwaysdata.net/api/signup", formdata)
+      const response = await axios.post("http://frostyghost23.alwaysdata.net/api/signup", formdata)
 
       // Set back the loading to default
       setLoading("");
@@ -47,6 +47,10 @@ const Signup = () => {
       setEmail("");
       setPassword("");
       setPhone("");
+
+      setTimeout(() => {
+        setSuccess("");
+      }, 5000);
     }
     catch(error){
       // set the loading back to default
