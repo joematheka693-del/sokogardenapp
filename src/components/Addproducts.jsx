@@ -33,7 +33,7 @@ const Addproducts = () => {
       formdata.append("product_photo", product_photo);
 
       // Interact with axios module that will help connect to the https protocal[POST].
-      const response = await axios.post("https://kbenkamotho.alwaysdata.net/api/add_product", formdata)
+      const response = await axios.post("http://frostyghost23.alwaysdata.net/api/add_product", formdata)
 
       // Set back the loading to default
       setLoading(false);
